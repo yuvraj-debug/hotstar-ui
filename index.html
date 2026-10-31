@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>JioHotstar - Watch TV Shows, Movies, Specials, Live Cricket & Football</title>
+    <link rel="icon" href="https://secure-media.hotstar.com/web-assets/prod/jv-jhs_favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-hotstar">
+    <!-- Main App Container -->
+    <div id="app" class="hotstar-app">
+
+        <!-- Left Navigation Rail / Sidebar -->
+        <aside class="side-nav" id="sideNav">
+            <div class="nav-top">
+                <!-- JioHotstar Rebranded Logo -->
+                <a href="#home" class="nav-logo" title="JioHotstar Home" id="logoLink">
+                    <img src="https://img.hotstar.com/image/upload/v1737554969/web-assets/prod/images/rebrand/logo.png" 
+                         alt="JioHotstar" class="logo-img">
+                </a>
+
+                <!-- Subscribe Gold CTA -->
+                <button class="nav-subscribe-btn" id="subscribeNavBtn" title="Subscribe to JioHotstar">
+                    <span class="gold-sparkle">★</span>
+                    <span class="subscribe-text">Subscribe</span>
+                    <span class="subscribe-arrow">›</span>
+                </button>
+            </div>
+
+            <!-- Primary Navigation Links -->
+            <nav class="nav-links">
+                <button class="nav-item active" data-section="home" title="Home" id="navHome">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24" class="svg-icon"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                    </span>
+                    <span class="nav-label">Home</span>
+                </button>
+
+                <button class="nav-item" data-section="search" title="Search" id="navSearch">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24" class="svg-icon"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                    </span>
+                    <span class="nav-label">Search</span>
+                </button>
+
+                <button class="nav-item" data-section="tv" title="TV Shows" id="navTV">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24" class="svg-icon"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"/></svg>
+                    </span>
+                    <span class="nav-label">TV</span>
+                </button>
+
+                <button class="nav-item" data-section="movies" title="Movies" id="navMovies">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24" class="svg-icon"><path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z"/></svg>
+                    </span>
+                    <span class="nav-label">Movies</span>
+                </button>
+
+                <button class="nav-item" data-section="sports" title="Sports" id="navSports">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24" class="svg-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                    </span>
+                    <span class="nav-label">Sports</span>
+                </button>
+
+                <button class="nav-item" data-section="sparks" title="Sparks Shorts" id="navSparks">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24" class="svg-icon"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg>
+                    </span>
+                    <span class="nav-label">Sparks</span>
+                </button>
+
+                <button class="nav-item" data-section="categories" title="Categories" id="navCategories">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24" class="svg-icon"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/></svg>
+                    </span>
+                    <span class="nav-label">Categories</span>
+                </button>
+
+                <button class="nav-item" data-section="watchlist" title="My Space" id="navMySpace">
+                    <span class="nav-icon">
+                        <svg viewBox="0 0 24 24" class="svg-icon"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                    </span>
+                    <span class="nav-label">My Space</span>
+                    <span class="watchlist-count-badge" id="watchlistCountBadge" style="display: none;">0</span>
+                </button>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-viewport" id="mainViewport">
+
+            <!-- Top Sticky Glass Header -->
+            <header class="top-header" id="topHeader">
+                <div class="header-left">
+                    <!-- Category Tabs -->
+                    <div class="quick-category-pills" id="categoryPills">
+                        <button class="cat-pill active" data-filter="all">All</button>
+                        <button class="cat-pill" data-filter="tv">TV Shows</button>
+                        <button class="cat-pill" data-filter="movies">Movies</button>
+                        <button class="cat-pill" data-filter="sports">Sports</button>
+                        <button class="cat-pill" data-filter="bigg-boss">Bigg Boss</button>
+                        <button class="cat-pill" data-filter="peacock">Peacock</button>
+                        <button class="cat-pill" data-filter="disney">Disney+</button>
+                    </div>
+                </div>
+
+                <div class="header-right">
+                    <!-- Quick Search Bar -->
+                    <div class="quick-search-box">
+                        <span class="search-icon-sm">
+                            <svg viewBox="0 0 24 24" class="svg-icon-sm"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                        </span>
+                        <input type="text" id="headerSearchInput" placeholder="Movies, shows and more" autocomplete="off">
+                        <button class="search-clear-btn" id="searchClearBtn" style="display: none;" title="Clear">✕</button>
+                    </div>
+
+                    <!-- Subscribe / Upgrade Button -->
+                    <button class="header-upgrade-btn" id="upgradeBtn" title="Subscribe">
+                        <span class="upgrade-sparkle">👑</span>
+                        <span>Subscribe</span>
+                    </button>
+
+                    <!-- User Profile Dropdown Button -->
+                    <div class="profile-avatar" id="profileBtn" title="User Profile">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&q=80" alt="Profile" class="avatar-img">
+                    </div>
+                </div>
+            </header>
+
+            <!-- Search Drawer / Overlay View (Hidden by default) -->
+            <section class="search-results-overlay" id="searchOverlay" style="display: none;">
+                <div class="search-overlay-header">
+                    <h2 class="search-heading">Search Results for "<span id="searchQueryText"></span>"</h2>
+                    <span class="results-count" id="resultsCountText">0 titles found</span>
+                </div>
+                <div class="search-results-grid" id="searchResultsGrid">
+                    <!-- Dynamic Search Cards -->
+                </div>
+            </section>
+
+            <!-- Regular Home Content Container -->
+            <div id="homeContentContainer">
+
+                <!-- Masthead Hero Billboard Carousel -->
+                <section class="masthead-billboard" id="masthead">
+                    <div class="billboard-backdrop-wrapper">
+                        <!-- Dynamic Background Image Layer -->
+                        <div class="billboard-image" id="billboardBg"></div>
+                        <!-- Progressive Cinematic Gradients -->
+                        <div class="billboard-vignette"></div>
+                        <div class="billboard-bottom-gradient"></div>
+                        <div class="billboard-left-gradient"></div>
+                    </div>
+
+                    <!-- Billboard Info Container -->
+                    <div class="billboard-content-wrapper">
+                        <div class="billboard-info" id="billboardInfo">
+                            <!-- Title Cutout Artwork -->
+                            <div class="title-cutout-container" id="billboardTitleCutout">
+                                <img src="https://img10.hotstar.com/image/upload/f_auto,h_148/sources/r1/cms/prod/7293/1789323857293-t" 
+                                     alt="Bigg Boss" class="title-cutout-img" id="heroCutoutImg">
+                            </div>
+
+                            <!-- Highlights & Category Badges -->
+                            <div class="billboard-tags" id="billboardTags">
+                                <span class="tag-highlight" id="heroRankTag">#1 in Hindi Today</span>
+                                <span class="tag-dot">•</span>
+                                <span class="tag-highlight" id="heroReleaseTag">New Episode Daily</span>
+                            </div>
+
+                            <!-- Metadata Row (Year, Age, Lang, Genre) -->
+                            <div class="billboard-meta" id="billboardMeta">
+                                <span class="meta-pill meta-year" id="heroYear">2026</span>
+                                <span class="meta-pill meta-rating" id="heroRating">U/A 16+</span>
+                                <span class="meta-pill meta-lang" id="heroLang">Hindi</span>
+                                <span class="meta-genres" id="heroGenres">Reality • Drama • Competition</span>
+                            </div>
+
+                            <!-- Synopsis Description -->
+                            <p class="billboard-description" id="heroDescription">
+                                Milega vardaan, ya machega toofan? Salman Khan hosts season 20 of India’s biggest reality phenomenon, serving 24x7 unfiltered entertainment, high-voltage drama, and unexpected alliances straight from the house!
+                            </p>
+
+                            <!-- Primary Action Buttons -->
+                            <div class="billboard-actions">
+                                <button class="btn-watch-primary" id="heroWatchBtn">
+                                    <span class="btn-play-icon">
+                                        <svg viewBox="0 0 24 24" class="svg-icon-play"><path d="M8 5v14l11-7z"/></svg>
+                                    </span>
+                                    <span>Watch Now</span>
+                                </button>
+
+                                <button class="btn-watchlist-secondary" id="heroWatchlistBtn" title="Add to Watchlist">
+                                    <span class="btn-add-icon" id="heroWatchlistIcon">+</span>
+                                    <span id="heroWatchlistText">Watchlist</span>
+                                </button>
+
+                                <button class="btn-icon-circular" id="heroSoundToggleBtn" title="Toggle Audio Preview">
+                                    <svg viewBox="0 0 24 24" class="svg-icon-sm" id="soundIcon">
+                                        <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Swiper Carousel Thumbnail Preview Rail -->
+                        <div class="billboard-carousel-thumbs" id="billboardThumbsRail">
+                            <!-- Thumbnails injected via JS -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section Trays Container -->
+                <div class="trays-stream" id="traysStream">
+
+                    <!-- Tray 1: New on JioHotstar (Vertical Poster Grid) -->
+                    <section class="content-tray" id="tray-new">
+                        <div class="tray-header">
+                            <h2 class="tray-title">New on JioHotstar</h2>
+                            <button class="tray-view-all" data-tray="new">View All <span>›</span></button>
+                        </div>
+                        <div class="tray-carousel-wrapper">
+                            <button class="tray-scroll-btn btn-prev" data-target="tray-scroll-1" aria-label="Previous">‹</button>
+                            <div class="tray-scroll-track vertical-posters" id="tray-scroll-1">
+                                <!-- Cards injected via JS -->
+                            </div>
+                            <button class="tray-scroll-btn btn-next" data-target="tray-scroll-1" aria-label="Next">›</button>
+                        </div>
+                    </section>
+
+                    <!-- Tray 2: Enter the Bigg Boss House (Horizontal 16:9 Live Cards) -->
+                    <section class="content-tray" id="tray-bb">
+                        <div class="tray-header">
+                            <h2 class="tray-title">Enter the Bigg Boss House</h2>
+                            <button class="tray-view-all" data-tray="bb">View All <span>›</span></button>
+                        </div>
+                        <div class="tray-carousel-wrapper">
+                            <button class="tray-scroll-btn btn-prev" data-target="tray-scroll-2" aria-label="Previous">‹</button>
+                            <div class="tray-scroll-track horizontal-cards" id="tray-scroll-2">
+                                <!-- Cards injected via JS -->
+                            </div>
+                            <button class="tray-scroll-btn btn-next" data-target="tray-scroll-2" aria-label="Next">›</button>
+                        </div>
+                    </section>
+
+                    <!-- Tray 3: Top 10 in India Today - Hindi (Numbered Badges) -->
+                    <section class="content-tray" id="tray-top10">
+                        <div class="tray-header">
+                            <h2 class="tray-title">Top 10 in India Today - Hindi</h2>
+                            <button class="tray-view-all" data-tray="top10">View All <span>›</span></button>
+                        </div>
+                        <div class="tray-carousel-wrapper">
+                            <button class="tray-scroll-btn btn-prev" data-target="tray-scroll-3" aria-label="Previous">‹</button>
+                            <div class="tray-scroll-track top10-posters" id="tray-scroll-3">
+                                <!-- Top 10 cards injected via JS -->
+                            </div>
+                            <button class="tray-scroll-btn btn-next" data-target="tray-scroll-3" aria-label="Next">›</button>
+                        </div>
+                    </section>
+
+                    <!-- Tray 4: Popular Indian & International Shows -->
+                    <section class="content-tray" id="tray-popular-shows">
+                        <div class="tray-header">
+                            <h2 class="tray-title">Popular Shows</h2>
+                            <button class="tray-view-all" data-tray="shows">View All <span>›</span></button>
+                        </div>
+                        <div class="tray-carousel-wrapper">
+                            <button class="tray-scroll-btn btn-prev" data-target="tray-scroll-4" aria-label="Previous">‹</button>
+                            <div class="tray-scroll-track vertical-posters" id="tray-scroll-4">
+                                <!-- Cards injected via JS -->
+                            </div>
+                            <button class="tray-scroll-btn btn-next" data-target="tray-scroll-4" aria-label="Next">›</button>
+                        </div>
+                    </section>
+
+                    <!-- Tray 5: Blockbuster Movies -->
+                    <section class="content-tray" id="tray-movies">
+                        <div class="tray-header">
+                            <h2 class="tray-title">Blockbuster Movies</h2>
+                            <button class="tray-view-all" data-tray="movies">View All <span>›</span></button>
+                        </div>
+                        <div class="tray-carousel-wrapper">
+                            <button class="tray-scroll-btn btn-prev" data-target="tray-scroll-5" aria-label="Previous">‹</button>
+                            <div class="tray-scroll-track vertical-posters" id="tray-scroll-5">
+                                <!-- Cards injected via JS -->
+                            </div>
+                            <button class="tray-scroll-btn btn-next" data-target="tray-scroll-5" aria-label="Next">›</button>
+                        </div>
+                    </section>
+
+                    <!-- Tray 6: Live Sports & Cricket Specials -->
+                    <section class="content-tray" id="tray-sports">
+                        <div class="tray-header">
+                            <h2 class="tray-title">Cricket & Live Sports</h2>
+                            <button class="tray-view-all" data-tray="sports">View All <span>›</span></button>
+                        </div>
+                        <div class="tray-carousel-wrapper">
+                            <button class="tray-scroll-btn btn-prev" data-target="tray-scroll-6" aria-label="Previous">‹</button>
+                            <div class="tray-scroll-track horizontal-cards" id="tray-scroll-6">
+                                <!-- Cards injected via JS -->
+                            </div>
+                            <button class="tray-scroll-btn btn-next" data-target="tray-scroll-6" aria-label="Next">›</button>
+                        </div>
+                    </section>
+
+                    <!-- Tray 7: Peacock's Finest -->
+                    <section class="content-tray" id="tray-peacock">
+                        <div class="tray-header">
+                            <h2 class="tray-title">Peacock's Finest</h2>
+                            <button class="tray-view-all" data-tray="peacock">View All <span>›</span></button>
+                        </div>
+                        <div class="tray-carousel-wrapper">
+                            <button class="tray-scroll-btn btn-prev" data-target="tray-scroll-7" aria-label="Previous">‹</button>
+                            <div class="tray-scroll-track vertical-posters" id="tray-scroll-7">
+                                <!-- Cards injected via JS -->
+                            </div>
+                            <button class="tray-scroll-btn btn-next" data-target="tray-scroll-7" aria-label="Next">›</button>
+                        </div>
+                    </section>
+
+                </div>
+
+            </div>
+
+            <!-- Dedicated Watchlist / My Space View (Hidden initially) -->
+            <section class="myspace-section" id="mySpaceView" style="display: none;">
+                <div class="myspace-header">
+                    <div class="myspace-user-info">
+                        <div class="myspace-avatar">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&q=80" alt="User">
+                        </div>
+                        <div class="myspace-details">
+                            <h2 class="myspace-name">Yuvraj Sharma</h2>
+                            <span class="myspace-plan-tag">⭐ JioHotstar Premium 4K</span>
+                            <p class="myspace-phone">+91 98765 43210</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="myspace-tabs">
+                    <button class="myspace-tab active" data-tab="watchlist">My Watchlist (<span id="mySpaceCount">0</span>)</button>
+                    <button class="myspace-tab" data-tab="history">Continue Watching</button>
+                    <button class="myspace-tab" data-tab="downloads">Downloads (0)</button>
+                </div>
+
+                <div class="myspace-content">
+                    <div class="watchlist-grid" id="mySpaceGrid">
+                        <!-- Populated dynamically -->
+                    </div>
+                    <div class="empty-watchlist-state" id="emptyWatchlistState">
+                        <div class="empty-icon">📺</div>
+                        <h3>Your Watchlist is empty</h3>
+                        <p>Explore movies and TV shows and tap "+ Watchlist" to save your favorites here.</p>
+                        <button class="btn-explore-now" id="emptyExploreBtn">Explore Now</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- JioHotstar Global Footer -->
+            <footer class="hotstar-footer">
+                <div class="footer-columns">
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>View Website in</h4>
+                        <ul>
+                            <li><a href="#" class="active-lang">English ✓</a></li>
+                            <li><a href="#">हिन्दी (Hindi)</a></li>
+                            <li><a href="#">தமிழ் (Tamil)</a></li>
+                            <li><a href="#">తెలుగు (Telugu)</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Need Help?</h4>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Supported Devices</a></li>
+                            <li><a href="#">Feedback</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Connect with Us</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-icon" title="Twitter / X">𝕏</a>
+                            <a href="#" class="social-icon" title="Facebook">f</a>
+                            <a href="#" class="social-icon" title="Instagram">📸</a>
+                            <a href="#" class="social-icon" title="YouTube">▶</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-legal">
+                        <p>© 2026 STAR. All Rights Reserved. HBO, Home Box Office and all related channel and programming logos are service marks of, and all related programming visuals and elements are the property of, Home Box Office, Inc. All rights reserved.</p>
+                        <div class="legal-links">
+                            <a href="#">Terms of Use</a>
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">FAQ</a>
+                        </div>
+                    </div>
+                    <div class="footer-app-badges">
+                        <span class="badge-pill">Google Play</span>
+                        <span class="badge-pill">App Store</span>
+                    </div>
+                </div>
+            </footer>
+
+        </main>
+
+        <!-- Fullscreen Theater Video Player Modal -->
+        <div class="player-modal" id="playerModal" style="display: none;">
+            <div class="player-container" id="playerContainer">
+                <!-- Video Element -->
+                <video class="main-video" id="mainVideo" preload="metadata" playsinline></video>
+
+                <!-- Video Overlay Controls -->
+                <div class="player-overlay" id="playerOverlay">
+                    <!-- Top Bar -->
+                    <div class="player-top-bar">
+                        <button class="player-back-btn" id="playerCloseBtn" title="Back (Esc)">
+                            <svg viewBox="0 0 24 24" class="svg-icon"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                        </button>
+                        <div class="player-title-info">
+                            <h3 class="player-content-title" id="playerTitle">Bigg Boss</h3>
+                            <span class="player-content-subtitle" id="playerSubtitle">Season 20 • Episode 53</span>
+                        </div>
+                        <div class="player-top-actions">
+                            <span class="quality-badge" id="playerQualityBadge">4K UHD</span>
+                        </div>
+                    </div>
+
+                    <!-- Center Big Play/Pause Indicator -->
+                    <button class="player-center-play" id="playerCenterPlayBtn">
+                        <svg viewBox="0 0 24 24" class="svg-center-play" id="centerPlayIcon">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </button>
+
+                    <!-- Bottom Controls -->
+                    <div class="player-bottom-bar">
+                        <!-- Scrubber Progress Bar -->
+                        <div class="progress-bar-container" id="progressContainer">
+                            <div class="progress-buffered" id="progressBuffered"></div>
+                            <div class="progress-played" id="progressPlayed"></div>
+                            <div class="progress-thumb" id="progressThumb"></div>
+                            <div class="progress-tooltip" id="progressTooltip">00:00</div>
+                        </div>
+
+                        <div class="player-controls-row">
+                            <div class="controls-left">
+                                <!-- Play / Pause Button -->
+                                <button class="ctrl-btn" id="playPauseBtn" title="Play/Pause (Space)">
+                                    <svg viewBox="0 0 24 24" class="svg-icon-ctrl" id="playPauseIcon">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                </button>
+
+                                <!-- 10s Rewind -->
+                                <button class="ctrl-btn" id="rewindBtn" title="Rewind 10s (←)">
+                                    <svg viewBox="0 0 24 24" class="svg-icon-ctrl"><path d="M12.5 8c-2.65 0-5.05.99-6.9 2.6L2 7v9h9l-3.62-3.62c1.39-1.2 3.16-1.98 5.12-1.98 3.73 0 6.84 2.55 7.73 6h2.08c-.97-4.57-5.01-8-9.81-8z"/></svg>
+                                </button>
+
+                                <!-- 10s Forward -->
+                                <button class="ctrl-btn" id="forwardBtn" title="Forward 10s (→)">
+                                    <svg viewBox="0 0 24 24" class="svg-icon-ctrl"><path d="M11.5 8c2.65 0 5.05.99 6.9 2.6L22 7v9h-9l3.62-3.62c-1.39-1.2-3.16-1.98-5.12-1.98-3.73 0-6.84 2.55-7.73 6H1.69c.97-4.57 5.01-8 9.81-8z"/></svg>
+                                </button>
+
+                                <!-- Volume / Mute -->
+                                <div class="volume-control-wrapper">
+                                    <button class="ctrl-btn" id="volumeBtn" title="Mute/Unmute (M)">
+                                        <svg viewBox="0 0 24 24" class="svg-icon-ctrl" id="volumeIcon">
+                                            <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                                        </svg>
+                                    </button>
+                                    <input type="range" class="volume-slider" id="volumeSlider" min="0" max="1" step="0.05" value="1">
+                                </div>
+
+                                <!-- Time Display -->
+                                <div class="time-display">
+                                    <span id="currentTimeText">0:00</span>
+                                    <span class="time-separator">/</span>
+                                    <span id="totalDurationText">0:00</span>
+                                </div>
+                            </div>
+
+                            <div class="controls-right">
+                                <!-- Subtitles & Audio Selector -->
+                                <button class="ctrl-btn" id="subtitlesBtn" title="Audio & Subtitles">
+                                    <svg viewBox="0 0 24 24" class="svg-icon-ctrl"><path d="M19 4H5c-1.11 0-2 .9-2 2v12c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-8 7H9.5v-.5h-2v3h2V13H11v1c0 .55-.45 1-1 1H7c-.55 0-1-.45-1-1v-4c0-.55.45-1 1-1h3c.55 0 1 .45 1 1v1zm7 0h-1.5v-.5h-2v3h2V13H18v1c0 .55-.45 1-1 1h-3c-.55 0-1-.45-1-1v-4c0-.55.45-1 1-1h3c.55 0 1 .45 1 1v1z"/></svg>
+                                </button>
+
+                                <!-- Picture-in-Picture -->
+                                <button class="ctrl-btn" id="pipBtn" title="Picture in Picture">
+                                    <svg viewBox="0 0 24 24" class="svg-icon-ctrl"><path d="M19 11h-8v6h8v-6zm4 8V4.98C23 3.88 22.1 3 21 3H3c-1.1 0-2 .88-2 1.98V19c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2zm-2 .02H3V4.97h18v14.05z"/></svg>
+                                </button>
+
+                                <!-- Fullscreen Toggle -->
+                                <button class="ctrl-btn" id="fullscreenBtn" title="Fullscreen (F)">
+                                    <svg viewBox="0 0 24 24" class="svg-icon-ctrl" id="fullscreenIcon">
+                                        <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toast Notifications System -->
+        <div class="toast-container" id="toastContainer"></div>
+
+    </div>
+
+    <!-- Application Script -->
+    <script src="app.js"></script>
+</body>
+</html>
